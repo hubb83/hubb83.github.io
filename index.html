@@ -15,9 +15,9 @@
       </div>
 
       <div class="stats">
-        <div><strong>10+</strong><span>Years Experience</span></div>
-        <div><strong>15+</strong><span>Projects</span></div>
-        <div><strong>8</strong><span>Engineers Led</span></div>
+        <div><strong>13+</strong><span>Years Experience</span></div>
+        <div><strong>10+</strong><span>Projects</span></div>
+        <div><strong>18+</strong><span>Engineers Led</span></div>
       </div>
 
       <blockquote>
@@ -35,6 +35,7 @@
         <button class="tab" data-tab="education">Education</button>
         <button class="tab" data-tab="certificates">Certificates</button>
         <button class="tab" data-tab="contact">Contact</button>
+        <button class="tab" data-tab="chatbox">Chatbox</button>
       </nav>
 
       <section id="about" class="panel active">
@@ -42,7 +43,7 @@
         <h1>Hubert Kuc</h1>
         <h2>Senior Software Engineer</h2>
         <p class="lead">
-          Senior engineer with over 10 years of development experience across the full software lifecycle:
+          Senior engineer with over 13 years of development experience across the full software lifecycle:
           from concept and design through implementation, testing and delivery.
         </p>
         <p>
@@ -154,6 +155,49 @@
           <a href="tel:+48503172691"><span>Phone</span>(+48) 503-172-691</a>
           <div><span>Location</span>Warsaw, Poland</div>
           <div><span>Availability</span>Open to new opportunities</div>
+        </div>
+      </section>
+      <section id="chatbox" class="panel">
+        <p class="eyebrow">My AI Assistant</p>
+        <h2>Rupert</h2>
+        <p class="lead">
+          My AI assistant to answer questions screening questions about my CV, projects, technical experience, leadership background and availability.
+        </p>
+
+        <div class="chat-widget" aria-label="AI assistant chatbox">
+          <div class="chat-header">
+            <div>
+              <strong>Rupert AI Assistant</strong>
+              <span>CV · Experience · Projects · Availability</span>
+            </div>
+            <span class="chat-status">Online</span>
+          </div>
+
+          <div id="chat-messages" class="chat-messages" aria-live="polite">
+            <div class="chat-row assistant">
+              <div class="chat-avatar">AI</div>
+              <div class="chat-bubble assistant">
+                Hi, I am Hubert's AI assistant. How can I help?
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-actions">
+            <button id="chat-voice" class="voice-button" type="button" aria-label="Start voice conversation">
+              🎙 Voice conversation
+            </button>
+            <span id="voice-status" class="voice-status">Voice mode preview</span>
+          </div>
+
+          <div class="chat-input-row">
+            <input
+              id="chat-question"
+              type="text"
+              placeholder="Type a question or use voice conversation..."
+              autocomplete="off"
+            />
+            <button id="chat-send" type="button">Send</button>
+          </div>
         </div>
       </section>
     </section>
