@@ -31,11 +31,13 @@
       <nav class="tabs" aria-label="Portfolio sections">
         <button class="tab active" data-tab="about">About</button>
         <button class="tab" data-tab="experience">Experience</button>
+        <button class="tab" data-tab="projects">Projects</button>
         <button class="tab" data-tab="skills">Skills</button>
         <button class="tab" data-tab="education">Education</button>
         <button class="tab" data-tab="certificates">Certificates</button>
         <button class="tab" data-tab="contact">Contact</button>
         <button class="tab" data-tab="chatbox">Chatbox</button>
+        <button class="tab" data-tab="cookbook">Cookbook</button>
       </nav>
 
       <section id="about" class="panel active">
@@ -111,6 +113,56 @@
             <p><strong>C++ Software Engineer</strong></p>
             <p>STB UX/UI features for embedded Linux systems, including media/PVR library, signal scanning, EPG and channel list management.</p>
             <p class="tech">C++ · Embedded Linux · GUI · Architecture</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="panel">
+        <p class="eyebrow">My work</p>
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-thumb">🤖 RUPERT · AI ASSISTANT</div>
+            <div class="project-body">
+              <h3>Rupert — AI Portfolio Assistant <span class="project-badge">Live</span></h3>
+              <p>RAG assistant that answers recruiter questions about my CV, projects and availability. Powers the Chatbox tab on this site.</p>
+              <div class="chips">
+                <span>FastAPI</span><span>LangChain</span><span>Gemini</span><span>ChromaDB</span><span>Docker</span>
+              </div>
+              <div class="project-links">
+                <button class="project-btn primary" type="button" data-goto-tab="chatbox">Try it — Chatbox</button>
+                <a class="project-btn ghost" href="https://github.com/hubb83/ai-assistant-chatbox" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">🍳 COOKBOOK AI</div>
+            <div class="project-body">
+              <h3>Cookbook AI</h3>
+              <p>Recognizes ingredients from a photo (including iPhone HEIC) and suggests 3 recipes. Multimodal Gemini with server-side image preprocessing.</p>
+              <div class="chips">
+                <span>Gemini Vision</span><span>LangChain</span><span>FastAPI</span><span>Pillow</span>
+              </div>
+              <div class="project-links">
+                <button class="project-btn primary" type="button" data-goto-tab="cookbook">Try it — Cooking recipes</button>
+                <a class="project-btn ghost" href="https://github.com/hubb83/cookbook-app" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">🌐 PORTFOLIO SITE</div>
+            <div class="project-body">
+              <h3>Portfolio Website</h3>
+              <p>This site: a static frontend on GitHub Pages integrated with an AI backend — tabbed CV, chatbox and voice mode preview.</p>
+              <div class="chips">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span>
+              </div>
+              <div class="project-links">
+                <a class="project-btn ghost" href="https://github.com/hubb83/hubb83.github.io" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
           </article>
         </div>
       </section>
@@ -198,6 +250,54 @@
             />
             <button id="chat-send" type="button">Send</button>
           </div>
+        </div>
+      </section>
+      <section id="cookbook" class="panel">
+        <p class="eyebrow">AI Cookbook</p>
+        <h2>Cookbook</h2>
+        <p class="lead">
+          Upload a photo of your ingredients — AI identifies them and suggests 3 recipes. Add or adjust ingredients manually if you like.
+        </p>
+
+        <div class="subtabs" role="tablist" aria-label="Cookbook views">
+          <button id="cb-tab-search" class="subtab active" type="button" data-cbview="search">🔍 New search</button>
+          <button id="cb-tab-saved" class="subtab" type="button" data-cbview="saved">📖 Saved recipes</button>
+        </div>
+
+        <div id="cb-view-search" class="cb-view active">
+          <div id="cb-dropzone" class="dropzone" tabindex="0">
+            <input id="cb-file" type="file" accept="image/*,.heic,.heif" hidden />
+            <div id="cb-dz-empty">
+              <div class="dz-ico">📷</div>
+              <strong>Drop an ingredients photo here</strong>
+              <em>JPEG · PNG · WebP · HEIC (iPhone) — up to 25 MB</em>
+              <div class="dz-actions">
+                <button id="cb-choose" class="project-btn primary" type="button">Choose photo</button>
+              </div>
+            </div>
+            <div id="cb-dz-preview" hidden>
+              <img id="cb-preview-img" alt="Selected ingredients photo preview" />
+              <span id="cb-preview-name"></span>
+              <button id="cb-remove-photo" class="project-btn ghost" type="button">✕ Remove photo</button>
+            </div>
+          </div>
+
+          <label class="cb-label" for="cb-tag-input">Ingredients (optional — press Enter to add)</label>
+          <div id="cb-tags" class="tags-input">
+            <input id="cb-tag-input" type="text" placeholder="e.g. eggs, bacon…" autocomplete="off" />
+          </div>
+
+          <div class="cb-actions">
+            <button id="cb-analyze" class="project-btn primary" type="button">Find recipes</button>
+            <span id="cb-status" class="cb-status"></span>
+          </div>
+
+          <div id="cb-results"></div>
+        </div>
+
+        <div id="cb-view-saved" class="cb-view">
+          <div id="cb-saved-status" class="cb-status"></div>
+          <div id="cb-saved-list" class="saved-grid"></div>
         </div>
       </section>
     </section>
