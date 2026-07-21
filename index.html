@@ -1,79 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hubert Kuc - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hubert Kuc | Senior Software Engineer</title>
+  <meta name="description" content="Private portfolio of Hubert Kuc, Senior Software Engineer specializing in C++, backend systems, embedded software, DevOps and engineering leadership." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- COVER -->
-    <div class="cover">
-        <img class="cover-profile" src="profile.png"/>
+  <main class="page-shell">
+    <aside class="profile-card">
+      <div class="photo-wrap">
+        <img src="assets/hubert-kuc-photo.jpeg" alt="Hubert Kuc portrait" />
+      </div>
+
+      <div class="stats">
+        <div><strong>13+</strong><span>Years Experience</span></div>
+        <div><strong>10+</strong><span>Projects</span></div>
+        <div><strong>18+</strong><span>Engineers Led</span></div>
+      </div>
+
+      <blockquote>
+        “Passionate about building reliable software systems and leading teams to deliver high-quality solutions.”
+      </blockquote>
+
+      <a class="download-btn" href="assets/Hubert_Kuc_CV_2026.pdf" download>Download CV</a>
+    </aside>
+
+    <section class="content-card">
+      <nav class="tabs" aria-label="Portfolio sections">
+        <button class="tab active" data-tab="about">About</button>
+        <button class="tab" data-tab="experience">Experience</button>
+        <button class="tab" data-tab="projects">Projects</button>
+        <button class="tab" data-tab="skills">Skills</button>
+        <button class="tab" data-tab="education">Education</button>
+        <button class="tab" data-tab="certificates">Certificates</button>
+        <button class="tab" data-tab="contact">Contact</button>
+        <button class="tab" data-tab="chatbox">Chatbox</button>
+        <button class="tab" data-tab="cookbook">Cookbook</button>
+      </nav>
+
+      <section id="about" class="panel active">
+        <p class="eyebrow">Private portfolio</p>
         <h1>Hubert Kuc</h1>
-        <p>Senior developer | 10+ year expericence</p>
-        
-        <div style="text-align: center;" >
-            <a class="contact-button" href="mailto:hubertkuc@gmail.com">CONTACT ME</a>
+        <h2>Senior Software Engineer</h2>
+        <p class="lead">
+          Senior engineer with over 13 years of development experience across the full software lifecycle:
+          from concept and design through implementation, testing and delivery.
+        </p>
+        <p>
+          My background combines C++ and C engineering, backend architecture, embedded systems, GUI applications,
+          microservices, machine learning, computer vision and DevOps. I enjoy solving complex technical problems,
+          modernizing legacy systems and supporting engineering teams.
+        </p>
+
+        <h3>Skills Summary</h3>
+        <div class="chips">
+          <span>C++</span><span>C</span><span>Python</span><span>Java</span><span>Bazel</span>
+          <span>Maven</span><span>GitLab CI</span><span>Linux</span><span>Embedded Systems</span>
+          <span>Microservices</span><span>Machine Learning</span><span>Computer Vision</span>
+          <span>UML</span><span>Docker</span><span>Azure DevOps</span><span>Agile</span><span>Scrum</span>
         </div>
+      </section>
 
-        <div class="cover-contact">
-            <a href="mailto:hubertkuc@gmail.com">hubertkuc@gmail.com</a>
-            <a href="tel:+48503172691">(+48) 503-172-691</a>
+      <section id="experience" class="panel">
+        <p class="eyebrow">Professional path</p>
+        <h2>Experience</h2>
+        <div class="timeline">
+          <article>
+            <span class="date">08.2024 — 01.2026</span>
+            <h3>Goldman Sachs</h3>
+            <p><strong>Senior Software Engineer, Core Engineering</strong></p>
+            <p>Migration of legacy C++ and Java codebases to a unified build and CI ecosystem based on Bazel, Maven and GitLab CI. SME for complex build, linker and runtime issues.</p>
+            <p class="tech">Bazel · Maven · Bash · GDB · Valgrind · Python · GitLab CI · C++ · Java · DevOps</p>
+          </article>
+
+          <article>
+            <span class="date">05.2022 — 12.2023</span>
+            <h3>Mobica Ltd.</h3>
+            <p><strong>Group Manager</strong></p>
+            <p>Line manager for a group of 8 engineers: appraisals, salary reviews, development plans, 1:1s, project matching and managerial interviews.</p>
+            <p class="tech">People Management · Hiring · Mentoring · Development Plans</p>
+          </article>
+
+          <article>
+            <span class="date">09.2021 — 12.2023</span>
+            <h3>Mobica Ltd. / ABB US</h3>
+            <p><strong>Backend Developer / Architect / Team Leader</strong></p>
+            <p>Led an international team of 7 engineers working on modular software architecture for petroleum flow computers.</p>
+            <p class="tech">C++17 · Python · CMake · libuv · UML · Google Test · Protobuf · QEMU · Azure DevOps</p>
+          </article>
+
+          <article>
+            <span class="date">12.2020 — 08.2021</span>
+            <h3>Mobica Ltd. / Ingenico UK</h3>
+            <p><strong>Senior Software Engineer</strong></p>
+            <p>Development of microservices for cashless payments.</p>
+            <p class="tech">C++11 · Python · REST · SSL · SSH · Google Test · Jira · Confluence · Git</p>
+          </article>
+
+          <article>
+            <span class="date">04.2016 — 07.2020</span>
+            <h3>Airbus Defence and Space</h3>
+            <p><strong>Senior Software Engineer & Team Lead</strong></p>
+            <p>Development of central flight software components for JUICE and MetOP-SG projects. SRS, detailed UML design, implementation and unit tests.</p>
+            <p class="tech">C · UML · MISRA · ECSS · Test Coverage · Waterfall</p>
+          </article>
+
+          <article>
+            <span class="date">2013 — 2015</span>
+            <h3>Samsung Electronics</h3>
+            <p><strong>C++ Software Engineer</strong></p>
+            <p>STB UX/UI features for embedded Linux systems, including media/PVR library, signal scanning, EPG and channel list management.</p>
+            <p class="tech">C++ · Embedded Linux · GUI · Architecture</p>
+          </article>
         </div>
-    </div>
+      </section>
 
-    <!-- GRAY 1 -->
-    <div class="section gray-section-1">
-        <div class="separator"></div>
-        <p>Senior Software Engineer</p>
-    </div>
-
-    <!-- WHITE -->
-    <div class="section" style="overflow: auto;">
-        <h2>About me</h2>
-        <img class="col-content" src="profile2.jpg">
-        <div class="col-content float-right">
-            
-            <div class="text-with-vertical-line">
-                <p>Passionate C++ and python developer with over 10 years of experience in software development...</p>
+      <section id="projects" class="panel">
+        <p class="eyebrow">My work</p>
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-thumb">🤖 RUPERT · AI ASSISTANT</div>
+            <div class="project-body">
+              <h3>Rupert — AI Portfolio Assistant <span class="project-badge">Live</span></h3>
+              <p>RAG assistant that answers recruiter questions about my CV, projects and availability. Powers the Chatbox tab on this site.</p>
+              <div class="chips">
+                <span>FastAPI</span><span>LangChain</span><span>Gemini</span><span>ChromaDB</span><span>Docker</span>
+              </div>
+              <div class="project-links">
+                <button class="project-btn primary" type="button" data-goto-tab="chatbox">Try it — Chatbox</button>
+                <a class="project-btn ghost" href="https://github.com/hubb83/ai-assistant-chatbox" target="_blank" rel="noopener">GitHub</a>
+              </div>
             </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">🍳 COOKBOOK AI</div>
+            <div class="project-body">
+              <h3>Cookbook AI</h3>
+              <p>Recognizes ingredients from a photo (including iPhone HEIC) and suggests 3 recipes. Multimodal Gemini with server-side image preprocessing.</p>
+              <div class="chips">
+                <span>Gemini Vision</span><span>LangChain</span><span>FastAPI</span><span>Pillow</span>
+              </div>
+              <div class="project-links">
+                <button class="project-btn primary" type="button" data-goto-tab="cookbook">Try it — Cooking recipes</button>
+                <a class="project-btn ghost" href="https://github.com/hubb83/cookbook-app" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">🌐 PORTFOLIO SITE</div>
+            <div class="project-body">
+              <h3>Portfolio Website</h3>
+              <p>This site: a static frontend on GitHub Pages integrated with an AI backend — tabbed CV, chatbox and voice mode preview.</p>
+              <div class="chips">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span>
+              </div>
+              <div class="project-links">
+                <a class="project-btn ghost" href="https://github.com/hubb83/hubb83.github.io" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
         </div>
-        
-    </div>
+      </section>
 
-    <!-- GRAY 2 -->
-    <div class="section gray-section-2">
-        <h2>Portfolio</h2>
-        <p>Examples and training projects</p>
-        <table class="col-portfolio" style="display:inline-block">
-            <tr>
-                <td><div class="vertical-bar"></div></td>
-                <td><a href="portfolio-restaurant-website.html"><img style="width: 100%" src="project1small.jpg"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td align="center"><a href="portfolio-restaurant-website.html">Restaurant websitein Django</a></td>
-            </tr>
+      <section id="skills" class="panel">
+        <p class="eyebrow">Technical toolkit</p>
+        <h2>Skills</h2>
+        <div class="skill-grid">
+          <div><h3>Languages</h3><p>C++, C, Python, Java, UML</p></div>
+          <div><h3>Backend & Systems</h3><p>Microservices, REST, SSL, SSH, embedded systems, Linux, Windows</p></div>
+          <div><h3>Build & DevOps</h3><p>Bazel, Maven, CMake, GitLab CI, Docker, Containers, Azure DevOps, Bash</p></div>
+          <div><h3>Testing & Debugging</h3><p>Google Test, GDB, Valgrind, test coverage, linker/runtime diagnostics</p></div>
+          <div><h3>AI / Computer Vision</h3><p>YOLO, SSD, OpenCV, TensorFlow, pandas, NumPy</p></div>
+          <div><h3>Leadership</h3><p>Team leading, Scrum Master, line management, hiring, mentoring, appraisals</p></div>
+        </div>
+      </section>
 
-        </table>
+      <section id="education" class="panel">
+        <p class="eyebrow">Academic background</p>
+        <h2>Education</h2>
+        <div class="cards">
+          <article><h3>Warsaw University of Technology</h3><p>Postgraduate Resources Management in IT, 2015</p></article>
+          <article><h3>Université Paris-Sud XI</h3><p>PhD Experimental Nuclear Physics, 2014</p></article>
+          <article><h3>AGH University of Science and Technology</h3><p>MSc Technical Nuclear Physics, 2009</p></article>
+        </div>
+      </section>
 
-        <table class="col-portfolio float-right">
-            <tr>
-                <td><div class="vertical-bar"></div></td>
-                <td><a href="portfolio-ai-mobile-app.html"><img style="width: 100%" src="project2small.jpg"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td align="center"><a href="portfolio-ai-mobile-app.html">"AI" Mobile App with Kivy</a></td>
-            </tr>
+      <section id="certificates" class="panel">
+        <p class="eyebrow">Training</p>
+        <h2>Certificates & Courses</h2>
+        <div class="cards">
+          <article><h3>PRINCE2 Foundation Certificate</h3><p>Project management foundation certification.</p></article>
+          <article><h3>Professional Trainings</h3><p>DevOps, embedded development, Python, Django, pandas, Java, Spring Boot, microservices, machine learning and computer vision.</p></article>
+        </div>
+      </section>
 
-        </table>
-    </div>
+      <section id="contact" class="panel">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <a href="mailto:hubertkuc@gmail.com"><span>Email</span>hubertkuc@gmail.com</a>
+          <a href="tel:+48503172691"><span>Phone</span>(+48) 503-172-691</a>
+          <div><span>Location</span>Warsaw, Poland</div>
+          <div><span>Availability</span>Open to new opportunities</div>
+        </div>
+      </section>
+      <section id="chatbox" class="panel">
+        <p class="eyebrow">My AI Assistant</p>
+        <h2>Rupert</h2>
+        <p class="lead">
+          My AI assistant to answer questions screening questions about my CV, projects, technical experience, leadership background and availability.
+        </p>
 
-    <!-- WHITE -->
-        <iframe src="contact-frame.html" scrolling="no" />
+        <div class="chat-widget" aria-label="AI assistant chatbox">
+          <div class="chat-header">
+            <div>
+              <strong>Rupert AI Assistant</strong>
+              <span>CV · Experience · Projects · Availability</span>
+            </div>
+            <span class="chat-status">Online</span>
+          </div>
 
-    
+          <div id="chat-messages" class="chat-messages" aria-live="polite">
+            <div class="chat-row assistant">
+              <div class="chat-avatar">AI</div>
+              <div class="chat-bubble assistant">
+                Hi, I am Hubert's AI assistant. How can I help?
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-actions">
+            <button id="chat-voice" class="voice-button" type="button" aria-label="Start voice conversation">
+              🎙 Voice conversation
+            </button>
+            <span id="voice-status" class="voice-status">Voice mode preview</span>
+          </div>
+
+          <div class="chat-input-row">
+            <input
+              id="chat-question"
+              type="text"
+              placeholder="Type a question or use voice conversation..."
+              autocomplete="off"
+            />
+            <button id="chat-send" type="button">Send</button>
+          </div>
+        </div>
+      </section>
+      <section id="cookbook" class="panel">
+        <p class="eyebrow">AI Cookbook</p>
+        <h2>Cookbook</h2>
+        <p class="lead">
+          Upload a photo of your ingredients — AI identifies them and suggests 3 recipes. Add or adjust ingredients manually if you like.
+        </p>
+
+        <div class="subtabs" role="tablist" aria-label="Cookbook views">
+          <button id="cb-tab-search" class="subtab active" type="button" data-cbview="search">🔍 New search</button>
+          <button id="cb-tab-saved" class="subtab" type="button" data-cbview="saved">📖 Saved recipes</button>
+        </div>
+
+        <div id="cb-view-search" class="cb-view active">
+          <div id="cb-dropzone" class="dropzone" tabindex="0">
+            <input id="cb-file" type="file" accept="image/*,.heic,.heif" hidden />
+            <div id="cb-dz-empty">
+              <div class="dz-ico">📷</div>
+              <strong>Drop an ingredients photo here</strong>
+              <em>JPEG · PNG · WebP · HEIC (iPhone) — up to 25 MB</em>
+              <div class="dz-actions">
+                <button id="cb-choose" class="project-btn primary" type="button">Choose photo</button>
+              </div>
+            </div>
+            <div id="cb-dz-preview" hidden>
+              <img id="cb-preview-img" alt="Selected ingredients photo preview" />
+              <span id="cb-preview-name"></span>
+              <button id="cb-remove-photo" class="project-btn ghost" type="button">✕ Remove photo</button>
+            </div>
+          </div>
+
+          <label class="cb-label" for="cb-tag-input">Ingredients (optional — press Enter to add)</label>
+          <div id="cb-tags" class="tags-input">
+            <input id="cb-tag-input" type="text" placeholder="e.g. eggs, bacon…" autocomplete="off" />
+          </div>
+
+          <div class="cb-actions">
+            <button id="cb-analyze" class="project-btn primary" type="button">Find recipes</button>
+            <span id="cb-status" class="cb-status"></span>
+          </div>
+
+          <div id="cb-results"></div>
+        </div>
+
+        <div id="cb-view-saved" class="cb-view">
+          <div id="cb-saved-status" class="cb-status"></div>
+          <div id="cb-saved-list" class="saved-grid"></div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
