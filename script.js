@@ -3,8 +3,8 @@
 // https://your-api.onrender.com/chat
 // const BACKEND_URL = "https://YOUR_BACKEND_DOMAIN/chat";
 
-const BACKEND_URL = "http://localhost:8000/chat";
-// const BACKEND_URL = "http://hubb83.github.io/chat";
+// const BACKEND_URL = "http://localhost:8000/chat";
+const BACKEND_URL = "https://api.render.com/deploy/srv-d9fn2nfjqk9s73eiu4jg?key=Sd5bvXKZCRA/chat"; // Example Render deploy hook URL
 
 const tabs = document.querySelectorAll(".tab");
 const panels = document.querySelectorAll(".panel");
@@ -77,6 +77,40 @@ function setVoiceStatus(text) {
   }
 }
 
+// Free-tier hosting sleeps after inactivity; the first request wakes it (~up to a minute).
+// If a reply takes a while, show a transient hint so the user knows it's not stuck.
+let wakeHintTimer = null;
+
+function showWakingHint() {
+  if (!messagesEl || document.getElementById("wake-hint-row")) return;
+
+  const row = document.createElement("div");
+  row.className = "chat-row assistant";
+  row.id = "wake-hint-row";
+
+  const avatar = document.createElement("div");
+  avatar.className = "chat-avatar";
+  avatar.textContent = "AI";
+
+  const bubble = document.createElement("div");
+  bubble.className = "chat-bubble assistant wake-hint";
+  bubble.textContent =
+    "⏳ Waking up the server… The backend runs on free hosting that sleeps after inactivity, so the first reply can take up to a minute.";
+
+  row.appendChild(avatar);
+  row.appendChild(bubble);
+  messagesEl.appendChild(row);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+function clearWakingHint() {
+  if (wakeHintTimer) {
+    clearTimeout(wakeHintTimer);
+    wakeHintTimer = null;
+  }
+  document.getElementById("wake-hint-row")?.remove();
+}
+
 async function sendQuestion(questionFromVoice = false) {
   const question = questionEl?.value.trim();
   if (!question) return;
@@ -84,6 +118,7 @@ async function sendQuestion(questionFromVoice = false) {
   appendMessage("user", question);
   questionEl.value = "";
   setLoading(true);
+  wakeHintTimer = setTimeout(showWakingHint, 4000);
 
   conversation.push({ role: "user", content: question });
 
@@ -108,15 +143,18 @@ async function sendQuestion(questionFromVoice = false) {
     const data = await response.json();
     const answer = data.answer || data.message || "I could not generate an answer.";
 
+    clearWakingHint();
     appendMessage("assistant", answer);
     conversation.push({ role: "assistant", content: answer });
   } catch (error) {
+    clearWakingHint();
     appendMessage(
       "assistant",
       "Sorry, the assistant is currently unavailable. Please try again later."
     );
     console.error("Chatbox error:", error);
   } finally {
+    clearWakingHint();
     setLoading(false);
     questionEl?.focus();
   }
@@ -380,7 +418,7 @@ async function analyze() {
 
   cbAnalyzeBtn.disabled = true;
   cbAnalyzeBtn.textContent = "Analyzing…";
-  setCbStatus("Asking the AI chef… (first request may take a moment)");
+  setCbStatus("Asking the AI chef… The server may need a minute to wake up on first use.");
   cbResults.innerHTML = "";
 
   try {
