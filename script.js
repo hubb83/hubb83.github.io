@@ -4,7 +4,7 @@
 // const BACKEND_URL = "https://YOUR_BACKEND_DOMAIN/chat";
 
 // const BACKEND_URL = "http://localhost:8000/chat";
-const BACKEND_URL = "https://api.render.com/deploy/srv-d9fn2nfjqk9s73eiu4jg?key=Sd5bvXKZCRA/chat"; // Example Render deploy hook URL
+const BACKEND_URL = "https://ai-assistant-chatbox-us1.onrender.com/chat"; // Example Render deploy hook URL
 
 const tabs = document.querySelectorAll(".tab");
 const panels = document.querySelectorAll(".panel");
