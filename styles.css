@@ -830,6 +830,11 @@ p {
   border-bottom-left-radius: 6px;
 }
 
+.chat-bubble.wake-hint {
+  font-style: italic;
+  opacity: 0.85;
+}
+
 .chat-bubble.user::after,
 .chat-bubble.assistant::after {
   content: "";
